@@ -57,7 +57,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: Package
-        path: build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
+        path: ./build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
 
     - name: Create Release
       id: create-new-release
