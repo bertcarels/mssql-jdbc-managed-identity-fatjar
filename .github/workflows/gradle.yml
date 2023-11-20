@@ -60,7 +60,7 @@ jobs:
         path: build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
 
     - name: Create Release
-      id: create_release
+      id: create-new-release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
@@ -76,7 +76,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
+        upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+        asset_path: ./build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
         asset_name: my-artifact.jar
         asset_content_type: application/java-archive
