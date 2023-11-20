@@ -77,6 +77,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
         upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-        asset_path: ./build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
+        asset_path: ./mssql-jdbc-managed-identity-fatjar/build/libs/mssql-jdbc-fatjar-1.0-SNAPSHOT-all.jar
         asset_name: my-artifact.jar
         asset_content_type: application/java-archive
