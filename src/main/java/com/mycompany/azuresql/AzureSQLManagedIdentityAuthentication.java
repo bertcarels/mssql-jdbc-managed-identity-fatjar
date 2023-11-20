@@ -1,4 +1,4 @@
-package org.example;
+package com.mycompany.azuresql;
 
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
@@ -10,11 +10,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class AzureSQLManagedIdentityExample {
+public class AzureSQLManagedIdentityAuthentication {
     public static void main(String[] args) {
         try {
 
-            Logger logger = LoggerFactory.getLogger(AzureSQLManagedIdentityExample.class);
+            Logger logger = LoggerFactory.getLogger(AzureSQLManagedIdentityAuthentication.class);
 
             logger.info("Running query on:");
             logger.info("server: " + args[0]);
