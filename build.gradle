@@ -27,12 +27,6 @@ test {
     useJUnitPlatform()
 }
 
-//jar {
-//    manifest {
-//        attributes 'Class-Path': '/libs/a.jar'
-//    }
-//}
-
 
 application {
     // Set the main class for the application JAR
@@ -41,21 +35,18 @@ application {
 
 
 
-configurations {
+//configurations {
     // Create a custom configuration that extends from implementation and is resolvable
-    myImplementation
-}
+//    myImplementation
+//}
 
 shadowJar {
 
 
-    //configurations = [project.configurations.compile]
 
 
-    mergeServiceFiles()
+//    mergeServiceFiles()
 
-    //enableRelocation true
-    //relocationPrefix "myapp"
     relocate ('ch', 'myshade.ch')
     relocate ('com.azure', 'myshade.com.azure')
     relocate ('com.fasterxml', 'myshade.com.fasterxml')
