@@ -32,7 +32,7 @@ public class AzureSQLManagedIdentityAuthentication {
             SQLServerDataSource ds = new SQLServerDataSource();
             ds.setServerName(args[0] +".database.windows.net");
             ds.setDatabaseName(args[1]);
-            ds.setAuthentication("ActiveDirectoryMSI");
+            ds.setAuthentication(args[2]);
 
             // Establish the connection
             Connection connection = ds.getConnection();
