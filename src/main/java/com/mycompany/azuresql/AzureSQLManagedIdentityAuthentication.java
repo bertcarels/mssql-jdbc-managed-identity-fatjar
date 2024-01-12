@@ -25,16 +25,20 @@ public class AzureSQLManagedIdentityAuthentication {
             logger.info("auth: " + args[3]);
             
 
-
-
-
-
-
             // Set up the Azure SQL Database DataSource
             SQLServerDataSource ds = new SQLServerDataSource();
             ds.setServerName(args[0] +".database.windows.net");
             ds.setDatabaseName(args[1]);
             ds.setAuthentication(args[3]);
+
+            try (Connection connection = ds.getConnection();
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+                if (rs.next()) {
+                    System.out.println("You have successfully logged on as: " + rs.getString(1));
+                }
+            }
+
 
             // Establish the connection
             Connection connection = ds.getConnection();
