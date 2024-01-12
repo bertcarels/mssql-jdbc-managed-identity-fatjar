@@ -22,6 +22,8 @@ public class AzureSQLManagedIdentityAuthentication {
             logger.info("server: " + args[0]);
             logger.info("db: " + args[1]);
             logger.info("table: " + args[2]);
+            logger.info("auth: " + args[3]);
+            
 
 
 
@@ -32,7 +34,7 @@ public class AzureSQLManagedIdentityAuthentication {
             SQLServerDataSource ds = new SQLServerDataSource();
             ds.setServerName(args[0] +".database.windows.net");
             ds.setDatabaseName(args[1]);
-            ds.setAuthentication(args[2]);
+            ds.setAuthentication(args[3]);
 
             // Establish the connection
             Connection connection = ds.getConnection();
