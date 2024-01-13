@@ -18,6 +18,7 @@ dependencies {
     implementation 'com.azure:azure-identity:1.9.2'
     implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.1.jre8'
     implementation 'com.microsoft.azure:msal4j:1.13.8'
+    implementation 'com.azure:azure-core-http-netty:1.13.11'
     implementation 'org.slf4j:slf4j-api:1.7.32'
     implementation 'ch.qos.logback:logback-classic:1.2.6'
 
@@ -45,18 +46,19 @@ shadowJar {
 
 
 
-//    mergeServiceFiles()
+    mergeServiceFiles()
 
-    relocate ('ch', 'myshade.ch')
-    relocate ('com.azure', 'myshade.com.azure')
-    relocate ('com.fasterxml', 'myshade.com.fasterxml')
-    relocate ('com.microsoft.aad', 'myshade.com.microsoft.aad')
-    relocate ('com.nimbusds', 'myshade.com.nimbusds')
-    relocate ('com.sun', 'myshade.com.sun')
-    relocate ('io', 'myshade.io')
-    relocate ('microsoft', 'myshade.microsoft')
-    relocate ('mssql', 'myshade.mssql')
-    relocate ('net', 'myshade.net')
-    relocate ('org.slf4j', 'myshade.org.slf4j')
-    relocate ('reactor', 'myshade.reactor')
+//    relocate ('ch', 'myshade.ch')
+//    relocate ('com.azure', 'myshade.com.azure')
+//    relocate ('com.fasterxml', 'myshade.com.fasterxml')
+//    relocate ('com.microsoft.aad', 'myshade.com.microsoft.aad')
+//    relocate ('com.nimbusds', 'myshade.com.nimbusds')
+//    relocate ('com.sun', 'myshade.com.sun')
+//    relocate ('io', 'myshade.io')
+//    relocate ('microsoft', 'myshade.microsoft')
+//    relocate ('mssql', 'myshade.mssql')
+//    relocate ('net', 'myshade.net')
+//    relocate ('org.slf4j', 'myshade.org.slf4j')
+//    relocate ('reactor', 'myshade.reactor')
+
 }
