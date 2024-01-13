@@ -35,7 +35,7 @@ public class AzureSQLManagedIdentityAuthentication {
                 Statement stmt = connection.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
                 if (rs.next()) {
-                    System.out.println("You have successfully logged on as: " + rs.getString(1));
+                   logger.info("You have successfully logged on as: " + rs.getString(1));
                 }
             }
 
