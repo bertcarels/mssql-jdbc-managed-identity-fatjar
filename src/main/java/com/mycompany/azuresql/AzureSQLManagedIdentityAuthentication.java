@@ -43,9 +43,6 @@ public class AzureSQLManagedIdentityAuthentication {
             // Establish the connection
             Connection connection = ds.getConnection();
 
-
-            while (true) {
-
             // Execute a simple query
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT TOP 5 * FROM " + args[2] );
@@ -58,9 +55,6 @@ public class AzureSQLManagedIdentityAuthentication {
             // Close resources
             resultSet.close();
             statement.close();
-
-            Thread.sleep(4000);    
-            }    
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
